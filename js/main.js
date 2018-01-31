@@ -288,10 +288,10 @@
 				// hide the current entry and show the next/previous one.
 				// when both updatePageNumber, hide and show are finished:
 				Promise.all([this.currentEntry.hide(this.direction), newEntry.show(this.direction), this.updatePageNumber()]).then(() => {
-					this.isEntriesAnimating = false;
 					this.currentEntry.DOM.el.classList.remove('section--current');
 					newEntry.DOM.el.classList.add('section--current');
 					this.currentEntry = newEntry;
+					this.isEntriesAnimating = false;
 				});
 			};
 
@@ -364,7 +364,7 @@
 			});
 		}
 		toggleFactsContainer() {
-			if ( this.isFactsAnimating ) {
+			if ( this.isFactsAnimating || this.isEntriesAnimating && !this.isFactsOpen ) {
 				return;
 			};
 			this.isFactsAnimating = true;
