@@ -96,7 +96,7 @@ button:focus {
 /* Codrops links */
 .codrops-links {
 	position: relative;
-	z-index: 9;
+	z-index: 1000;
 	display: flex;
 	margin: 2rem 1.5rem;
 	white-space: nowrap;
@@ -434,10 +434,13 @@ button:focus {
 		top: 0;
 		right: 0;
 	}
+	.sections--factsopen .codrops-links {
+		opacity: 0;
+		pointer-events: none;
+	}
 	.codrops-icon {
 		color: #fff;
 	}
-
 	.menu {
 		grid-template-columns: 47% 53%;
 	}
