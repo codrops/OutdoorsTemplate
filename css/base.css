@@ -464,8 +464,9 @@ button:focus {
 		font-weight: bold;
 		cursor: pointer;
 		width: 48%;
-		padding: 0 0 5vh 5vw;
+		padding: 0 0 0 5vw;
 		margin: 0 0 0 2vw;
+		height: 5rem;
 		position: relative;
 		display: grid;
 		grid-template: 100% / 100%;
@@ -595,6 +596,7 @@ button:focus {
 		grid-gap: 1rem;
 		padding: 10vh 5vw;
 		background: transparent;
+		position: relative;
 	}
 	.section__gallery-item {
 		padding: 0 0 0 1rem;
@@ -607,6 +609,7 @@ button:focus {
 		padding: 10vh 5vw;
 		pointer-events: none;
 		background: transparent;
+		position: relative;
 		z-index: 200;
 		grid-area: 1 / 2 / 4 / 3;
 	}
