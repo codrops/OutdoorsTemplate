@@ -2,7 +2,7 @@
 
 An implementation of [Gil Huybrecht](http://www.gilhuybrecht.com/) ["Outdoors"](https://dribbble.com/shots/4022235-Outdoors-Transition) design project.
 
-![Image Title](link)
+![Outdoors Template](https://tympanus.net/codrops/wp-content/uploads/2018/01/outdoors_featured.jpg)
 
 [Article on Codrops](https://tympanus.net/codrops/?p=33851)
 
