@@ -82,11 +82,11 @@
 		}
 		toggle(direction) {
 			this.direction = direction; 
-			return Promise.all([this.toggleTitle(!this.isHidden), 
-								this.toggleDescription(!this.isHidden),
-								this.toggleImage(!this.isHidden),
-								this.toggleMore(!this.isHidden),
-								this.toggleFacts(!this.isHidden)]);
+			return Promise.all([this.toggleTitle(), 
+								this.toggleDescription(),
+								this.toggleImage(),
+								this.toggleMore(),
+								this.toggleFacts()]);
 		}
 		toggleTitle() {
 			anime.remove(this.DOM.titleLetters);
