@@ -209,9 +209,9 @@
 			const paddingFacts = parseFloat(paddingFactsStyle.paddingTop) + parseFloat(paddingFactsStyle.paddingBottom);
 			
 			this.factsTranslation = win.height - 2 * factHeight - paddingFacts;
-			this.currentEntry.DOM.expander.style.transform = `scale3d(0.52,1,1) translate3d(0px,${this.factsTranslation}px,0px)`;
 			for ( let i = 0; i <= this.entriesTotal - 1; ++i ) {
 				const entry = this.DOM.entries[i];
+				entry.DOM.expander.style.transform = `scale3d(0.54,1,1) translate3d(0px,${this.factsTranslation}px,0px)`;
 				for ( let j = 0, len = entry.DOM.facts.items.length; j <= len - 1; ++j ) {
 					entry.DOM.facts.ty = this.factsTranslation;
 					const item = entry.DOM.facts.items[j];
@@ -421,7 +421,7 @@
 				}),
 				this.animateExpander({
 					translateY: 0,
-					scaleX: 0.52
+					scaleX: 0.54
 				}),
 				this.animateFactsItems({
 					translateY: 0,
@@ -447,7 +447,7 @@
 				easing: settings.expander.easing,
 				delay: !this.isFactsOpen ? 0 : 300,
 				translateY: !this.isFactsOpen ? [this.factsTranslation, 0] : this.factsTranslation,
-				scaleX: [0.52,0.52]
+				scaleX: [0.54,0.54]
 			}, animeconfig));
 		}
 		animateFactsItems(animeconfig) {

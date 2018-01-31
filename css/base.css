@@ -587,18 +587,6 @@ button:focus {
 	.section:fist-of-type .section__img {
 		background: var(--color-bg-img);
 	}
-	.js .section:not(.section--current) {
-		pointer-events: none;
-	}
-	.js .section:not(.section--current) .section__title span,
-	.js .section:not(.section--current) .section__description,
-	.js .section:not(.section--current) .section__img-inner,
-	.js .section:not(.section--current) .section__more-inner,
-	.js .section:not(.section--current) .section__more-text,
-	.js .section:not(.section--current) .section__more-link,
-	.js .section:not(.section--current) .section__facts-item {
-		opacity: 0;
-	}
 	.section__facts-item--clickable {
 		display: block;
 	}
@@ -617,9 +605,9 @@ button:focus {
 	}
 	.section__facts {
 		padding: 10vh 5vw;
-		z-index: 100;
 		pointer-events: none;
 		background: transparent;
+		z-index: 200;
 		grid-area: 1 / 2 / 4 / 3;
 	}
 	.section__facts-detail {
@@ -640,6 +628,18 @@ button:focus {
 	.section--current .section__facts-item--clickable,
 	.sections--factsopen .section__gallery-item {
 		pointer-events: auto;
+	}
+	.js .section:not(.section--current) {
+		pointer-events: none;
+	}
+	.js .section:not(.section--current) .section__title span,
+	.js .section:not(.section--current) .section__description,
+	.js .section:not(.section--current) .section__img-inner,
+	.js .section:not(.section--current) .section__more-inner,
+	.js .section:not(.section--current) .section__more-text,
+	.js .section:not(.section--current) .section__more-link,
+	.js .section:not(.section--current) .section__facts-item {
+		opacity: 0;
 	}
 }
 
